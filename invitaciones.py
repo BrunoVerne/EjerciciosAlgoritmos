@@ -7,37 +7,40 @@
 #PSEUDOCODIGO
 
 class Socio:
-    def __init__(self, nombre):
+    def __init__(self, nombre, conocidos):
         self.nombre = nombre
-        self.conocidos = set() 
+        self.conocidos = conocidos 
         
         
-    def invitar(self):
-        print(f"{self.nombre} ha sido invitado.")
-
-def seleccionar_invitados(socios):
-    
-    n = set(socios)
+   
+def seleccionar_invitados(n):
     cola = set()
 
-    for s in list(n):
-        if len(s.conocidos & n) < 4: 
+    for s in n:
+        if len(s.conocidos ) < 4: 
             n.remove(s)
             for conocido in s.conocidos:
                 cola.add(conocido)
 
-    # Paso 2: propagar efecto de eliminación
     seDesinvito = True
     while seDesinvito:
         seDesinvito = False
-        for c in list(cola):
-            cola.remove(c)
-            if c in n and len(c.conocidos & n) < 4:
+        for c in cola:
+            if c.conocidos < 4:
                 n.remove(c)
-                seDesinvito = True
                 for conocido in c.conocidos:
                     cola.add(conocido)
+                    conocido.conocidos -=1
+                
+                seDesinvito = True
+            cola.remove(c)
 
-    # Paso 3: invitar a los que quedan
+    
     for socioAinvitar in n:
         socioAinvitar.invitar()
+
+
+
+def invitar(self):
+    print(f"{self.nombre} ha sido invitado.")
+
