@@ -27,18 +27,29 @@ def encontrarMenor(vector, inicio, fin):
     if(menorDerecho is not None):
         return menorDerecho
 
-
+def encontrarMenor2(vector, inicio , fin):
+    if(fin < inicio):
+        return fin + 1
+    i = (fin + inicio) // 2 
+    if(vector[i] > i + 1):
+        if(i == inicio or vector[i-1] == i):
+            return i + 1
+        return encontrarMenor2(vector, inicio, i-1)
+    return encontrarMenor2(vector,i+1, fin)
+        
 
 if __name__ == "__main__":
     vector = [1,2,3,4,6,7,8,9]
-    print("vector 1:" ,encontrarMenor(vector, 0, len(vector)-1))
-    vector2 = [4,5,6,7,9]
-    print("vector 2:" ,encontrarMenor(vector2,0,len(vector2)-1))
+    print("vector 1:" ,encontrarMenor2(vector, 0, len(vector)-1))
+    vector2 = [1,2,4,5,6,7,9]
+    print("vector 2:" ,encontrarMenor2(vector2,0,len(vector2)-1))
     vector3 = [2, 3, 4, 5, 6]
-    print("vector3:", encontrarMenor(vector3, 0, len(vector3)-1))
+    print("vector3:", encontrarMenor2(vector3, 0, len(vector3)-1))
     vector4 = [1, 2, 3, 5, 7, 8, 9]
-    print("vector4:", encontrarMenor(vector4, 0, len(vector4)-1))  
-    vector5 = [10, 11, 12, 20, 21, 22]
-    print("vector5:", encontrarMenor(vector5, 0, len(vector5)-1))
+    print("vector4:", encontrarMenor2(vector4, 0, len(vector4)-1))  
+    vector5 = [1,10, 11, 12, 20, 21, 22]
+    print("vector5:", encontrarMenor2(vector5, 0, len(vector5)-1))
     vector6 = [1, 2, 3, 4, 10]
     print("vector6:", encontrarMenor(vector6, 0, len(vector6)-1))
+    
+    
