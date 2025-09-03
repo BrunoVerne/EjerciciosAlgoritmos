@@ -7,9 +7,9 @@ class Detector:
     
     def funciona(self, detector_a_probar):
         if self.confiable:  
-            return detector_a_probar.confiable
+            return detector_a_probar.confiable # me devuelve la posta del otro detector
         else:
-            return False
+            return random.choice([True, False]) # si esta fallado el detector te devuelve cualquier cosa 
     
     def __repr__(self):
         return f"Detector({self.id})"
@@ -17,7 +17,7 @@ class Detector:
 
 
 
-def detector_de_mentiras(vector, inicio, fin):
+def detector_de_mentiras(vector, inicio, fin):  # O(n)
     if(fin - inicio == 0):
         return vector[inicio]
     elif(fin - inicio < 0):
@@ -32,7 +32,7 @@ def detector_de_mentiras(vector, inicio, fin):
     
     candidato = detector_de_mentiras(vector, inicio, mitad)
     if candidato is not None:
-        if(chequearMayoria(candidato,vector)):
+        if(chequearMayoria(candidato,vector)): # se que mas de la mitad funcionan correctamente asi que debe matchear con mas de la mitad 
             return candidato
     
     candidato = detector_de_mentiras(vector, mitad + 1, fin)
@@ -45,7 +45,7 @@ def detector_de_mentiras(vector, inicio, fin):
     
 
 
-def chequearMayoria(elemento, vector):
+def chequearMayoria(elemento, vector): # O(n)
     contador = 0
     for i in vector:
         if i.funciona(elemento) and elemento.funciona(i):
