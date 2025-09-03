@@ -10,54 +10,51 @@
 # de búsqueda del elemento mayoritario. Nos contratan para construir una solución mejor
 # (proceso “C”).
 
-def procesoC(vector):
-    if len(vector) == 1:
-        return vector[0]
-    elif len(vector) == 2:
-        if vector[0] == vector[1]:
-            return vector[0]
-        return None
-    vector2 = []
-    i = 0
-    while i < len(vector) // 2 + 1:
-        if vector[i] == vector[i+1]:
-            vector2.append(vector[i])
-            vector2.append(vector[i+1])
-
-        i +=2
-          
-        
-    if i == len(vector) -1:
-        vector2.append(vector[i])
-    
-    if len(vector2) == 0:
+def procesoC(vector, inicio, fin):
+    if inicio == fin:
+        return vector[inicio]
+    elif fin - inicio == 1:
+        if vector[inicio] == vector[fin]:
+            return vector[inicio]
         return None
     
-    if(len(vector2) == len(vector)):
-        return vector2[0]
-
+    mitad = (inicio + fin) // 2
+    candidato_izquierdo = procesoC(vector, inicio, mitad)
+    candidato_derecho = procesoC(vector, mitad + 1, fin)
     
-    candidato = procesoC(vector2)
+    if candidato_izquierdo is not None and chequearMayoria(candidato_izquierdo, vector, inicio, fin):
+        return candidato_izquierdo
     
-    if candidato is None:
-        return None
+    if candidato_derecho is not None and chequearMayoria(candidato_derecho, vector, inicio, fin):
+        return candidato_derecho
     
-    apariciones = 0
-    for v in vector:
-        if v == candidato:
-            apariciones +=1
-    
-    if(apariciones > len(vector) // 2):
-        return "resultado: ", candidato, "apariciones: ", apariciones
     return None
+
     
+    
+
+def chequearMayoria(elemento, vector, inicio , fin):
+    contador = 0
+    for i in range(inicio, fin+1):
+        if vector[i] == elemento:
+            contador +=1
+    return contador > (fin - inicio + 1 ) // 2
+
 
 if __name__ == "__main__":
-    print(procesoC([1,1,2,1,3,1,1])) #1 aparece 5 veces  
-    print(procesoC([2,2,3,3,4,4]))  # None
-    print(procesoC([1,1,1,2,3]))       #1 aparece 3 veces
-    print(procesoC([5,5,5,5,2,3,5]))  # 5 aparece 5 veces
-    print(procesoC([9,8,9,9,7,9,6,9,9]))  #9 aparece 6 veces
-    print(procesoC([1,2,3,4,5])) #None
-    print(procesoC([1,1,1,1,1])) #1 aparece 5 veces (este me da mal )
-    print(procesoC([1,2,1,2,1])) # 1 aparece 3 veces
+    
+    vector1 = [1, 2, 3, 4, 5]  
+    print(procesoC(vector1, 0, len(vector1)-1))
+    
+    vector2 = [1, 1, 1, 2, 3] 
+    print(procesoC(vector2, 0, len(vector2)-1))
+
+    vector3 = [1, 1, 2, 2]     
+    print(procesoC(vector3, 0, len(vector3)-1))
+
+    vector4 = [1, 1, 1, 2, 2]  
+    print(procesoC(vector4, 0, len(vector4)-1))
+    
+    vector5 = [9,8,9,6,9,4,9,9,1,9]  
+    print(procesoC(vector5, 0, len(vector1)-1))
+
