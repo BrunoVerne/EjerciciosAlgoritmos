@@ -41,20 +41,47 @@ def chequearMayoria(elemento, vector, inicio , fin):
     return contador > (fin - inicio + 1 ) // 2
 
 
+
+def procesoC_mejorado(vector):
+    if not vector:
+        return None
+    
+   
+    candidato = None
+    contador = 0 
+    
+    for elemento in vector:
+        if contador == 0:
+            candidato = elemento
+            contador = 1
+        elif elemento == candidato:
+            contador += 1  
+        else:
+            contador -= 1 
+    
+    contador_verificacion = 0  
+    for elemento in vector:
+        if elemento == candidato:
+            contador_verificacion += 1
+    if contador_verificacion > len(vector) // 2:
+        return candidato 
+    return None
+    
+    
 if __name__ == "__main__":
     
     vector1 = [1, 2, 3, 4, 5]  
-    print(procesoC(vector1, 0, len(vector1)-1))
+    print(procesoC_mejorado(vector1))
     
     vector2 = [1, 1, 1, 2, 3] 
-    print(procesoC(vector2, 0, len(vector2)-1))
+    print(procesoC_mejorado(vector2))
 
     vector3 = [1, 1, 2, 2]     
-    print(procesoC(vector3, 0, len(vector3)-1))
+    print(procesoC_mejorado(vector3))
 
     vector4 = [1, 1, 1, 2, 2]  
-    print(procesoC(vector4, 0, len(vector4)-1))
+    print(procesoC_mejorado(vector4))
     
     vector5 = [9,8,9,6,9,4,9,9,1,9]  
-    print(procesoC(vector5, 0, len(vector1)-1))
+    print(procesoC_mejorado(vector5,))
 
