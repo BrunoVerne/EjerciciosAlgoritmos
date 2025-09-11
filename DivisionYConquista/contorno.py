@@ -37,53 +37,34 @@ def definir_contorno(edificios, inicio, fin):
         return [(edificio.izquierda, edificio.altura), (edificio.derecha, 0)]
     
     
-    elif fin - inicio == 1 :
-        multisuperposicion = False
-        if edificios.index(edificios[fin]) - edificios.index(edificios[inicio]) != 1:
-            multisuperposicion = True
-        
-        if not multisuperposicion:
-        
-            edificioA = edificios[inicio]
-            edificioB = edificios[fin]
-            if edificioA.izquierda < edificioB.izquierda and edificioA.derecha < edificioB.derecha:
-                if(edificioA.altura < edificioB.altura):
+    elif fin - inicio == 1 : 
+        edificioA = edificios[inicio]
+        edificioB = edificios[fin]
+        if edificioA.izquierda < edificioB.izquierda and edificioA.derecha < edificioB.derecha:
+            if(edificioA.altura < edificioB.altura):
+                return [(edificioA.izquierda, edificioA.altura),
+                        (edificioB.izquierda, edificioB.altura)]
+            
+            else:
+                return [(edificioA.izquierda, edificioA.altura),
+                        (edificioA.derecha, edificioB.altura)]
+                
+                
+        elif edificioA.izquierda < edificioB.izquierda and edificioA.derecha > edificioB.derecha:
+                if edificioA.altura < edificioB.altura:
                     return [(edificioA.izquierda, edificioA.altura),
                             (edificioB.izquierda, edificioB.altura)]
-                
                 else:
-                    return [(edificioA.izquierda, edificioA.altura),
-                            (edificioA.derecha, edificioB.altura)]
-                    
-                    
-            elif edificioA.izquierda < edificioB.izquierda and edificioA.derecha > edificioB.derecha:
-                    if edificioA.altura < edificioB.altura:
-                        return [(edificioA.izquierda, edificioA.altura),
-                                (edificioB.izquierda, edificioB.altura)]
-                    else:
-                        return [(edificioA.izquierda, edificioA.altura)]
-                            
-            elif edificioA.derecha < edificioB.izquierda:
-                    return [(edificioA.derecha, 0),(edificioB.izquierda, edificioB.altura)]
-        else:
-            contorno_superposiciones(inicio, fin)
+                    return [(edificioA.izquierda, edificioA.altura)]
+                        
+        elif edificioA.derecha < edificioB.izquierda:
+                return [(edificioA.derecha, 0),(edificioB.izquierda, edificioB.altura)]
 
     mitad = (inicio + fin) // 2
     izquierda = definir_contorno(edificios, inicio,mitad) 
     derecha = definir_contorno(edificios,mitad+1,fin)
     return izquierda + derecha
     
-
-def contorno_superposiciones(edificios, inicio, fin):
-    i = edificios.index([inicio])
-    j = edificios.index([fin])
-    
-    mas_alto = None
-    while i <= j:
-        edifico = edificios[i]
-        if(edificios[i].altura > mas_alto):
-            mas_alto = edi
-        i +=1
 
 
 if __name__ == "__main__":

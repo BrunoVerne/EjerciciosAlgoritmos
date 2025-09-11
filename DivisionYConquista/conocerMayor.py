@@ -50,7 +50,7 @@ def procesoC_mejorado(vector):
     candidato = None
     contador = 0 
     
-    for elemento in vector:
+    for elemento in vector: # O(n)
         if contador == 0:
             candidato = elemento
             contador = 1
