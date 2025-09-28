@@ -41,6 +41,5 @@ def ejecucion(palabra):
      
 
 if __name__ == "__main__":
-    if __name__ == "__main__":
-        frase = sys.argv[1]
-        print(ejecucion(frase))
+    frase = sys.argv[1]
+    print(ejecucion(frase))
