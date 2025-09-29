@@ -43,5 +43,4 @@ def encontrar_media(n, inicio, fin, elemento):
 
 
 
-#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
-#temporal, espacial.
+#COMPLEJIDAD TEMPORAL: O(log(n)) COMPLEJIDAD ESPACIAL O(log(n)):  EC DE RECURRENCIA: T(n) = T(n/2) + O(1)

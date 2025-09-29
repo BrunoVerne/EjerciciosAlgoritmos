@@ -40,3 +40,8 @@ if __name__ == "__main__":
     print(inversion(S))
     lista1 = [1, 2, 3, 4, 5, 6, 7, 8]
     print(inversion(lista1))
+
+
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.

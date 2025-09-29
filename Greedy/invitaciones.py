@@ -102,6 +102,9 @@ def seleccionar_invitados2(invitados):
 
     
 
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.
+
 
                 
     

@@ -70,3 +70,8 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
+
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.

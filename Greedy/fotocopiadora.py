@@ -41,4 +41,8 @@ def fotocopiadora(documentos):
                 
     return horarios, refresco_maquina, apercibimiento
 
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.
+
     

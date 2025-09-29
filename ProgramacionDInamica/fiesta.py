@@ -56,3 +56,7 @@ def codigo():
                 OPT[nodo][1] += OPT[hijo][0]
 
     return max(OPT[raiz][0], OPT[raiz][1])
+
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.

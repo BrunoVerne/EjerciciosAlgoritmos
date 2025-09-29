@@ -49,3 +49,10 @@ def mostrar_seleccionados(seleccionados, kilometros):
 if __name__ == "__main__":
     lista = [(1,5), (17,6), (19,2), (22,3), (127,4), (128,49)]
     print(carteles(lista))
+    
+    
+
+
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.

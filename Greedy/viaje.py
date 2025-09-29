@@ -25,3 +25,8 @@ Mientras haya nodos por visitar:
       previo[v] = u
 
 Recuperar camino desde destino hacia origen
+
+
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.

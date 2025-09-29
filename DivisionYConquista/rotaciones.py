@@ -31,13 +31,7 @@ def encontrar_rotacion(V, inicio, fin, longitud):
             return media
         return encontrar_rotacion(V,inicio, media, longitud)
     
- 
-    
-        
-    
-    
-    
-    
+
 if __name__ == "__main__":
     lista1= [9,1,6,7,8]
     print(encontrar_rotacion(lista1,0,len(lista1)-1, len(lista1)))
@@ -45,7 +39,6 @@ if __name__ == "__main__":
     
 
 
-#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
-#temporal, espacial.
-    
+    #COMPLEJIDAD TEMPORAL: O(log(n)) COMPLEJIDAD ESPACIAL O(log(n)):  EC DE RECURRENCIA: T(n) = T(n/2) +  O(1)
+
     

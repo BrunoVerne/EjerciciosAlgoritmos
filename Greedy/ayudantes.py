@@ -28,3 +28,12 @@ for j in range(len(actividades)-2, -1, -1):
             agarrados[j] = 0
 
 return [actividades[i] for i in range(len(actividades)) if agarrados[i] == 1]
+
+
+
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.
+#Relacion de recurrencia: OPT[i] = seleccionar i si el anterior seleccionado no incluye a i
+#0(n) complejidad temporal y O(n) complejidad espacial ya que necesito un array de n elementos para guardar los agarrados
+#y a su vez recorro ese array de elementos dos veces = O(2n) = O(n)

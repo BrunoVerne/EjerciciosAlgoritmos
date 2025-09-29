@@ -67,3 +67,8 @@ def bellman_ford(ciudades, aristas, origen, destino):
         v = prev[v]
 
     return dist[destino], camino
+
+
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.

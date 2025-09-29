@@ -42,3 +42,9 @@ if __name__ == "__main__":
     palabra = "osopesadotepesa"
     diccionario = ["oso", "pesado","te","pesa"]
     print(hacker(palabra,diccionario))
+    
+
+
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.

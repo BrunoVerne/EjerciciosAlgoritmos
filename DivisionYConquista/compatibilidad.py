@@ -62,3 +62,7 @@ def contarInversiones(l1, l2):
 if __name__ == "__main__":
     peliculas = [["A","B","C","D"], ["D", "C", "B","A"],["D", "A", "B","C"],["B", "A", "D","C"]]
     print(compatibilidad(peliculas))
+    
+    
+    
+    #COMPLEJIDAD TEMPORAL: O(n²) COMPLEJIDAD ESPACIAL:O(n²) EC DE RECURRENCIA: 2T(N/2) + n²m² siendo m cantidad de peliculas

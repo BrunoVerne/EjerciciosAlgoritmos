@@ -41,3 +41,9 @@ if __name__ == "__main__":
     R = 25
     C = 20
     print(computo(n,R,C))
+    
+    
+
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.

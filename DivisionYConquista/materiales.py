@@ -40,5 +40,4 @@ def encontrar(M, col_min, col_max, fila_min, fila_max, numero):
 
 
 
-#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
-#temporal, espacial.
+    #COMPLEJIDAD TEMPORAL: O(n) COMPLEJIDAD ESPACIAL (log(n)) :  EC DE RECURRENCIA: T(n) = 2T(n/2) + O(1)

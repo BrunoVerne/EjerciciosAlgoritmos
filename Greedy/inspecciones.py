@@ -20,3 +20,9 @@ for i en 1 to len(actividades)-1:
 horarios.agregar(singuardar.fin)
 
 return horarios
+
+
+
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.

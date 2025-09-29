@@ -22,3 +22,9 @@ if __name__ == "__main__":
     print(pesos_satelite(sensores1, 5))
     sensores2 = [(4, 20), (6, 30), (8, 40)]
     print(pesos_satelite(sensores2, 12))
+    
+    
+
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.

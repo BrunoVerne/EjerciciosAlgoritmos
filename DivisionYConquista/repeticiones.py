@@ -33,7 +33,5 @@ if __name__ == "__main__":
 
 
 
-
-#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
-#temporal, espacial.
+#COMPLEJIDAD TEMPORAL: O(n) COMPLEJIDAD ESPACIAL: O(log(n)) EC DE RECURRENCIA: T(n) = 2T(n/2) +  O(1)
     

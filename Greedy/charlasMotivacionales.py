@@ -40,6 +40,9 @@ def asignaciones(salas, oradores, intervalo, maxSalas):
 
     return salas
 
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.
                 
         
         

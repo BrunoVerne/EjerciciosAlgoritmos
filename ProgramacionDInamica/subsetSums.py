@@ -30,3 +30,8 @@ if __name__ == "__main__":
     W = 11
     resultado = subsetSum(elementos, W)
     print(f"Suma máxima posible sin exceder {W}: {resultado}")
+    
+    
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.

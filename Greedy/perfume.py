@@ -112,3 +112,6 @@ def merge(ingredientes):
         
     return ordenados
 
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.

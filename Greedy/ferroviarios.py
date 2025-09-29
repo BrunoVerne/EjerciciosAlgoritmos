@@ -30,3 +30,8 @@ Mientras haya estaciones por visitar:
       cuello_botella[v] = nuevo_cuello
 
 Al final, cuello_botella[v] contiene el máximo cuello de botella posible desde el origen hasta v.
+
+
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.

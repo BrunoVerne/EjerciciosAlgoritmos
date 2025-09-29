@@ -86,5 +86,4 @@ if __name__ == "__main__":
     print(procesoC_mejorado(vector5,))
 
 
-#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
-#temporal, espacial.
+    #COMPLEJIDAD TEMPORAL: O(n *log(n)) COMPLEJIDAD ESPACIAL:O(1) EC DE RECURRENCIA: 2T(n/2) +  O(n)

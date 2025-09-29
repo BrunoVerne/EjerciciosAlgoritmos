@@ -28,3 +28,7 @@ if __name__ == "__main__":
     elementos = [[10,1],[20,100],[5,1]]
     print(mochila2(total, elementos))
     
+    
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.

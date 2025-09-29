@@ -33,3 +33,9 @@ def cambioMinimo(n, base):
 
 if __name__ == "__main__":
     print(cambioMinimo(8,[1,2,4,5]))
+    
+    
+
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.

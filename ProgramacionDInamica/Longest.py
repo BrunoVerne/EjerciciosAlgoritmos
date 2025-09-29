@@ -21,3 +21,9 @@ def subsequences(vector):
 if __name__ == "__main__":
     lista = [2, 1, 4,2, 3, 9, 4, 6, 5, 4, 7]
     print(subsequences(lista))
+    
+    
+    
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.

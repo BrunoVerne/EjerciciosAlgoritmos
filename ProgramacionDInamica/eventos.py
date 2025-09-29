@@ -53,3 +53,9 @@ if __name__ == "__main__":
     
     resultado = eventos(ganancias)
     print(f"Máxima ganancia posible: {resultado}")
+    
+    
+
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.
