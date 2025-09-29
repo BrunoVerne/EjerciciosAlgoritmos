@@ -80,3 +80,6 @@ if __name__ == "__main__":
     print(contorno(edificios1))
     
     
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.

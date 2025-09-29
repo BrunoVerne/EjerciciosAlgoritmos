@@ -85,3 +85,6 @@ if __name__ == "__main__":
     vector5 = [9,8,9,6,9,4,9,9,1,9]  
     print(procesoC_mejorado(vector5,))
 
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.

@@ -43,3 +43,9 @@ if __name__ == "__main__":
     print(encontrar_rotacion(lista1,0,len(lista1)-1, len(lista1)))
     
     
+
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.
+    
+    

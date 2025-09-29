@@ -29,3 +29,11 @@ if __name__ == "__main__":
     lista1 = [1,1,2,3,4,5,6,7,7,7,7,7,8,8]
     print(solucion(lista1, 1))
     
+    
+
+
+
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.
+    

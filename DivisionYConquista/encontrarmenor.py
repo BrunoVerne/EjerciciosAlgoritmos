@@ -53,3 +53,6 @@ if __name__ == "__main__":
     print("vector6:", encontrarMenor(vector6, 0, len(vector6)-1))
     
     
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.

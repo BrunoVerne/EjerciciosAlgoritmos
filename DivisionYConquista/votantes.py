@@ -42,3 +42,8 @@ if __name__ == "__main__":
     lista = [1, 1, 1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 4]
 
     print(solucion(lista, [1,2,3,4]))
+    
+    
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.

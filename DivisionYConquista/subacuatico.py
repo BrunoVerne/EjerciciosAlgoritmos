@@ -42,3 +42,6 @@ def encontrar_media(n, inicio, fin, elemento):
     return encontrar_media(n,media+1,fin,elemento)
 
 
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.

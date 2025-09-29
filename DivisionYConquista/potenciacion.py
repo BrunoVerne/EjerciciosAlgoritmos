@@ -9,3 +9,10 @@ def potenciacion(a,b):
 
 if __name__ == "__main__":
     print(potenciacion(2,32))
+    
+    
+
+
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.

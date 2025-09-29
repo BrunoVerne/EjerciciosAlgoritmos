@@ -37,3 +37,8 @@ def encontrar(M, col_min, col_max, fila_min, fila_max, numero):
         # abajo
         return encontrar(M, col_min, col_max, mitad_fila + 1, fila_max, numero)
     
+
+
+
+#expresar la relación de recurrencia, brindar pseudocódigo y calcular la complejidad
+#temporal, espacial.
