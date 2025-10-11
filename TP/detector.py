@@ -17,46 +17,39 @@ class Detector:
 
 
 
-def detector_de_mentiras(vector, inicio, fin):  # O(n)
-    if(fin - inicio == 0):
+def detector_de_mentiras(vector, inicio, fin):
+    
+    if inicio == fin:
         return vector[inicio]
-    elif(fin - inicio < 0):
-        return None
     
-    elif (fin - inicio == 1):
-        if(vector[inicio].funciona(vector[fin]) and vector[fin].funciona(vector[inicio])):
-            return vector[inicio]
-        return None
+    mitad = (inicio + fin) // 2
     
-    mitad = (inicio + fin) //2
     
     candidato = detector_de_mentiras(vector, inicio, mitad)
-    if candidato is not None:
-        if(chequearMayoria(candidato,vector)): # se que mas de la mitad funcionan correctamente asi que debe matchear con mas de la mitad 
-            return candidato
     
-    candidato = detector_de_mentiras(vector, mitad + 1, fin)
-    if candidato is not None:
-        if(chequearMayoria(candidato,vector)):
-            return candidato
-        
+    if candidato is None:
+        candidato = detector_de_mentiras(vector, mitad + 1, fin)
+    
+    if candidato is None:
+        return None
+    
+    
+    conteo = 0
+    for i in range(inicio, fin + 1):
+        if candidato.funciona(vector[i]) and vector[i].funciona(candidato):
+            conteo += 1
+    
+    if conteo > (fin - inicio + 1) // 2:
+        return candidato
     return None
-    
-    
 
 
-def chequearMayoria(elemento, vector): # O(n)
-    contador = 0
-    for i in vector:
-        if i.funciona(elemento) and elemento.funciona(i):
-            contador +=1
-    return contador > len(vector) // 2
 
 if __name__ == "__main__":
-    dA = Detector(True, "A")
+    dA = Detector(False, "A")
     dB = Detector(True, "B")
     dC = Detector(True, "C")
-    dD = Detector(False, "D")
+    dD = Detector(True, "D")
     dE = Detector(False, "E")
     dF = Detector(True, "F")
     dG = Detector(False, "G")
