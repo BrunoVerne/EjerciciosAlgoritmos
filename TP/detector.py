@@ -54,14 +54,8 @@ if __name__ == "__main__":
     dF = Detector(True, "F")
     dG = Detector(False, "G")
     
-    vector1 = [dA, dB, dC, dD]      # mayoría confiable -> devuelve un confiable
-    vector2 = [dA, dB, dD, dE]       # 2 confiables de 4 -> no hay mayoría -> None
-    vector3 = [dA, dB, dC, dF]       # 4 confiables -> devuelve un confiable
-    vector4 = [dD, dE, dG]            # ninguno confiable -> None
-    vector5 = [dA, dD, dF, dG, dB]     # 3 confiables de 5 -> devuelve un confiable
+   
+    vector5 = [dA, dE, dF, dC, dB]     # 3 confiables de 5 -> devuelve un confiable
 
-    print(detector_de_mentiras(vector1, 0, len(vector1)-1))
-    print(detector_de_mentiras(vector2,0, len(vector2)-1))
-    print(detector_de_mentiras(vector3, 0, len(vector3)-1))
-    print(detector_de_mentiras(vector4, 0, len(vector4)-1))
+
     print(detector_de_mentiras(vector5, 0, len(vector5)-1))    

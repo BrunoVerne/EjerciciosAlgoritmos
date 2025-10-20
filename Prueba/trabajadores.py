@@ -14,11 +14,15 @@ def trabajadores(trabajadores):
             seleccion.append(trabajadores[i-1])
             ultimo = trabajadores[i]
 
-    if ultimo[0] > seleccion[-1][1] or ultimo[0] == seleccion[-1][1] and ultimo[2] > seleccion[-1][2]:
+    if len(seleccion) != 0:
+        if ultimo[0] > seleccion[-1][1] or ultimo[0] == seleccion[-1][1] and ultimo[2] > seleccion[-1][2]:
+            seleccion.append(ultimo)
+    
+    else:
         seleccion.append(ultimo)
     return seleccion
 
 
 if __name__ == "__main__":
-    t = [[1,1,1,2], [1,3,1,15], [2,3,4,6]]
-    print(trabajadores(t))
+    t8 = [[1,1,8,10], [3,4,5,7], [6,7,1,4]]
+    print(trabajadores(t8))
