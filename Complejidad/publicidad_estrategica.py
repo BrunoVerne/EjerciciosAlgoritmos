@@ -3,72 +3,48 @@
 # Un sitio Web se puede modelar como un grafo G = (V, E). Las acciones habituales de los
 # usuarios que visitan un sitio se pueden modelar mediante “t” recorridos posibles P1, P2, ... , Pt
 # (donde cada Pi es un camino dirigido en G). Dado un número k, se quieren elegir a lo sumo k
-# Un almacén registra en una matriz qué productos compra cada uno de sus clientes. Un
-# conjunto de clientes es diverso si cada uno de ellos compra cosas diferentes (tiene
-# intersección vacía con lo que compran los demás). Deﬁnimos al problema de los clientes
-# diversos como: Dada una matriz de registro, de tamaño m (clientes) x n (productos), y un
-# número k<=m, ¿existe un subconjunto de tamaño al menos k de los clientes que sea diverso?
-# Probar que el problema es NP-completo. Sugerencia: Reducir polinomialmente conjuntos
-# independientes a clientes diversos.
+# vértices en G para poner publicidad, de modo tal que todos los “t” recorridos habituales
+# pasen por al menos uno de esos vértices. Tenemos que mostrarle a esta empresa que su
+# idea no es realizable por el momento ya que el problema de la Publicidad Estratégica es
+# NP-completo. Sugerencia: relacionarlo con cubrimiento de vértices.
 
 
-# def solucion(registro,K,S)
-#     |registro| = m
-#     if |S| > m: 
+# demuestro que publicidad estratégica pertenece a NP
+# def solucion(G, K, S, T):
+#     if |S| > K:
 #         return False
     
-#     if |S| < K:
-#         return False
-    
-#     visitados = []
-#     for indice_elegido in S:                    O(S)
-#         if indice_elegido >= m:
+#     for nodo in S: 
+#         if not nodo pertenece a V: O(S * V)
 #             return False
-#         productos = registro[indice_elegido]
-#         for producto in productos:              O(n)
-#             if producto in visitados:
-#                 return false
-#             visitados.agregar(producto)
+            
+    
+#     for Pi in T:
+#         recorre = False
+#         for nodo in S: 
+#             if nodo pertenece a Pi: O(S*T*(V+E))
+#                 recorre = True
         
-        
-# Total = O(S*n)
-
-# def transformacion(G):
-#     clientes, productos = dividir_bipartito(G)
-#     m = |clientes|
-#     n = |productos|
-#     registro = matriz de m x n inicializada en 0
-#     for cliente in clientes:
-#         sea i el indice del cliente
-#         for elegido in grafo.adyacentes(cliente)
-#             sea j el indice del elegido
-#             registro[i][j] = producto
-#     return registro
+#         if not recorre:
+#             return False
     
-
+#     return True
     
+# TOTAL= O(S*T*(V+E))
 
-# demostracion de CLientes diversos es NP Hard
-# Podemos ver a la matriz de clientes x productos como un grafo bipartito que tiene de un lado clientes y del otro productos de tal manera que los clientes y sus productos elegidos
-# estan conectados por una arista y los clientes entre si no tienen arista ninguna entre ellos. Entonces podré saber que la lista de clientes diversos es correcta si y solo si ese subconjunto de clientes es un conjunto independiente del grafo ya que si alguno de los clientes comparten algun producto ese producto representado en el grafo como un nodo tendra arista de dos nodos que son del subconjunto por lo tanto ese nodo producto será vecino tanto de un cliente como del otro entonces no es un subconjunto válido
+# Ahora paso a demostrar que Publicidad Estrategica pertenece a NP Hard.
+# Existira una solución con Vertex Cover dado un grafo G=(V,E) y un natural K <==> existe una solucion con Publicidad Estratégica con G,K, y T siendo T cada arista del recorrido o sea T contiene todas las aristas del Grafo.
+# Representación: Vertex Cover(G,k)----> transformacion ---> Publicidad Estrategica(G,K,T) ---> T/F Publicidad estrategica == T/F Vertex Cover
+# Defino
 
-# Representacion: Instancia de Conjunto Independiente (G,k)
-#         ↓
-# transformación_polinomial (esta es la reducción)
-#         ↓
-# Instancia de Clientes Diversos (matriz, k)
-#         ↓
-# Si tuviera un resolvedor para Clientes Diversos
-#         ↓
-# Resultado de Clientes Diversos
-#         ↓
-# transformación_inversa
-#         ↓  
-# Resultado de Conjunto Independiente
-    
-        
-        
+# Transformacion(G', K):
 
-    
-    
+#     G = G'                         
+#     T = []                        
+
+#     para cada arista (u, v) en E':
+#         agregar [u, v] a T          // cada arista se vuelve un recorrido de 2 vértices
+
+#     devolver (G, T, K)
+            
     
