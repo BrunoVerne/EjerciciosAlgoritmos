@@ -54,4 +54,4 @@ if __name__ == "__main__":
     
     
 
-    #COMPLEJIDAD TEMPORAL: O(n) COMPLEJIDAD ESPACIAL:O(1) EC DE RECURRENCIA: 2T(n/2) +  O(1)
+    #COMPLEJIDAD TEMPORAL: O(n) COMPLEJIDAD ESPACIAL:O(nlog(n)) por la pila de recursión, EC DE RECURRENCIA: 2T(n/2) +  O(1)

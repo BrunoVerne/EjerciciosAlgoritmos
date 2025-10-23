@@ -225,42 +225,4 @@ def asignar_guardias(medicos, periodos, F):
     return asignaciones
 
 def ford_fulkerson(grafo, fuente, sumidero):
-    flujo_total = 0
-    
-    while True:
-        padres = {}
-        cola = [fuente]
-        padres[fuente] = None
-        
-        encontrado = False
-        while cola and not encontrado:
-            actual = cola.pop(0)
-            
-            for vecino, capacidad in grafo.conexiones.get(actual, {}).items():
-                if vecino not in padres and capacidad > 0:
-                    padres[vecino] = actual
-                    cola.append(vecino)
-                    if vecino == sumidero:
-                        encontrado = True
-                        break
-        
-        if not encontrado:
-            break
-        
-        flujo_camino = float('inf')
-        nodo = sumidero
-        while nodo != fuente:
-            padre = padres[nodo]
-            flujo_camino = min(flujo_camino, grafo.conexiones[padre][nodo])
-            nodo = padre
-        
-        nodo = sumidero
-        while nodo != fuente:
-            padre = padres[nodo]
-            grafo.conexiones[padre][nodo] -= flujo_camino
-            grafo.conexiones[nodo][padre] += flujo_camino
-            nodo = padre
-        
-        flujo_total += flujo_camino
-    
-    return flujo_total
+    return 0

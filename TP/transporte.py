@@ -46,10 +46,8 @@ def ejecucion(productos, subconjuntos):
         if cota >= min_camiones:
             return
         
-        # Ramificación 1: NO tomar el subconjunto actual
         backtrack(camiones, cubiertos, idx + 1)
         
-        # Ramificación 2: TOMAR el subconjunto actual si es válido
         subconjunto_actual = subconjuntos_ordenados[idx]
         conjunto_actual = set(subconjunto_actual)
         if not (conjunto_actual & cubiertos):

@@ -65,4 +65,4 @@ if __name__ == "__main__":
     
     
     
-    #COMPLEJIDAD TEMPORAL: O(n²) COMPLEJIDAD ESPACIAL:O(n²) EC DE RECURRENCIA: 2T(N/2) + n²m² siendo m cantidad de peliculas
+    #COMPLEJIDAD TEMPORAL: O(n²m²) COMPLEJIDAD ESPACIAL:O(n²) EC DE RECURRENCIA: 2T(N/2) + n²m² siendo m cantidad de peliculas
